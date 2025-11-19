@@ -1,3 +1,88 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero",
+      "description": "Elegant abstract background for hero section",
+      "imageUrl": "https://images.unsplash.com/photo-1548362851-ea052637ad64?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMHRleHR1cmV8ZW58MHx8fHwxNzYzNTQzMDE3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "abstract texture"
+    },
+    {
+      "id": "product-1",
+      "description": "Stylish modern watch on a dark background",
+      "imageUrl": "https://images.unsplash.com/photo-1760163180940-eecde9eda36c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjB3YXRjaHxlbnwwfHx8fDE3NjM1NjY4Mzl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "modern watch"
+    },
+    {
+      "id": "product-2",
+      "description": "Minimalist leather backpack",
+      "imageUrl": "https://images.unsplash.com/photo-1594300418249-eebf1858e9b7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxsZWF0aGVyJTIwYmFja3BhY2t8ZW58MHx8fHwxNzYzNTY2MTU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather backpack"
+    },
+    {
+      "id": "product-3",
+      "description": "Sleek wireless headphones",
+      "imageUrl": "https://images.unsplash.com/photo-1619296794093-3df1ae6819a8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8d2lyZWxlc3MlMjBoZWFkcGhvbmVzfGVufDB8fHx8MTc2MzQ5MDk1NHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "wireless headphones"
+    },
+    {
+      "id": "product-4",
+      "description": "Designer sunglasses on a textured surface",
+      "imageUrl": "https://images.unsplash.com/photo-1642792539381-b9d9a32f6e1b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxkZXNpZ25lciUyMHN1bmdsYXNzZXN8ZW58MHx8fHwxNzYzNTY2ODQwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "designer sunglasses"
+    },
+    {
+      "id": "product-5",
+      "description": "Classic leather sneakers",
+      "imageUrl": "https://images.unsplash.com/photo-1718802312915-4e03a6f33735?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGVhdGhlciUyMHNuZWFrZXJzfGVufDB8fHx8MTc2MzU2Njg0MHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather sneakers"
+    },
+    {
+      "id": "product-6",
+      "description": "Elegant fountain pen and notebook",
+      "imageUrl": "https://images.unsplash.com/photo-1473186505569-9c61870c11f9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxmb3VudGFpbiUyMHBlbnxlbnwwfHx8fDE3NjM0NTcwOTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fountain pen"
+    },
+    {
+      "id": "product-7",
+      "description": "A tailored navy blue blazer",
+      "imageUrl": "https://images.unsplash.com/photo-1720800834976-167afce6db67?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxibHVlJTIwYmxhemVyfGVufDB8fHx8MTc2MzUwOTIyMXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "blue blazer"
+    },
+    {
+      "id": "product-8",
+      "description": "A set of high-quality ceramic mugs",
+      "imageUrl": "https://images.unsplash.com/photo-1669329597053-993120e439ed?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxjZXJhbWljJTIwbXVnc3xlbnwwfHx8fDE3NjM0NDU1OTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ceramic mugs"
+    },
+    {
+      "id": "product-9",
+      "description": "A cashmere scarf in a neutral color",
+      "imageUrl": "https://images.unsplash.com/photo-1609803384069-19f3e5a70e75?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxjYXNobWVyZSUyMHNjYXJmfGVufDB8fHx8MTc2MzU0NzE3NXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "cashmere scarf"
+    },
+    {
+      "id": "product-10",
+      "description": "A smart home speaker on a wooden table",
+      "imageUrl": "https://images.unsplash.com/photo-1565499443358-6ffb1c759c3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8c21hcnQlMjBzcGVha2VyfGVufDB8fHx8MTc2MzU1MTUyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "smart speaker"
+    },
+    {
+      "id": "product-11",
+      "description": "A premium leather wallet",
+      "imageUrl": "https://images.unsplash.com/photo-1582126486298-9d5194a50d82?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMHx8bGVhdGhlciUyMHdhbGxldHxlbnwwfHx8fDE3NjM0NTkyNDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "leather wallet"
+    },
+    {
+      "id": "product-12",
+      "description": "A pair of noise-cancelling earbuds",
+      "imageUrl": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxlYXJidWRzfGVufDB8fHx8MTc2MzUyMzc3OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "earbuds"
+    },
+    {
+      "id": "promotion-1",
+      "description": "A stylish flat-lay of seasonal fashion items",
+      "imageUrl": "https://images.unsplash.com/photo-1605507647744-70267a239a32?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxmYXNoaW9uJTIwZmxhdGxheXxlbnwwfHx8fDE3NjM1MzczMjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "fashion flatlay"
+    }
+  ]
 }

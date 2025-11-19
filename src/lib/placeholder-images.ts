@@ -5,6 +5,7 @@ export type ImagePlaceholder = {
   description: string;
   imageUrl: string;
   imageHint: string;
+  images?: { url: string; hint: string }[];
 };
 
 export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;
