@@ -1,3 +1,6 @@
+
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { ParallaxHero } from '@/components/parallax-hero';
@@ -7,10 +10,17 @@ import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 export default function HomePage() {
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
-  const featuredProducts = products.slice(0, 4);
+  const featuredProducts = products.slice(0, 8); // Fetch more products for a better carousel experience
   const promotionImage = PlaceHolderImages.find(p => p.id === 'promotion-1');
 
   return (
@@ -25,11 +35,25 @@ export default function HomePage() {
               Discover our handpicked selection of premium products.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {featuredProducts.map(product => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {featuredProducts.map((product) => (
+                <CarouselItem key={product.id} className="sm:basis-1/2 lg:basis-1/4">
+                  <div className="p-1">
+                    <ProductCard product={product} />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="hidden md:flex" />
+            <CarouselNext className="hidden md:flex" />
+          </Carousel>
           <div className="text-center mt-12">
             <Button asChild size="lg">
               <Link href="/products">
