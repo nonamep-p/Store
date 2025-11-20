@@ -11,4 +11,5 @@ export type Product = {
   imageUrl: string;
   imageHint: string;
   images: { url: string; hint: string }[];
+  tags: string[];
 };

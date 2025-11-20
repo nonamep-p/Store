@@ -58,7 +58,12 @@ export default function ProductPage({ params }: ProductPageProps) {
         </div>
 
         <div>
-          <Badge variant="outline">{product.category}</Badge>
+          <div className="flex gap-2 flex-wrap">
+            <Badge variant="outline">{product.category}</Badge>
+            {product.tags.map(tag => (
+              <Badge key={tag} variant="secondary">{tag}</Badge>
+            ))}
+          </div>
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight my-2">{product.name}</h1>
           
           <div className="flex items-center gap-2 text-sm text-muted-foreground">

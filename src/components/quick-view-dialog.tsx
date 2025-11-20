@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import type { Product } from "@/lib/types";
 import { Star, ShoppingCart } from "lucide-react";
 import Link from "next/link";
+import { useToast } from "@/hooks/use-toast";
 
 interface QuickViewDialogProps {
   product: Product | null;
@@ -15,7 +16,15 @@ interface QuickViewDialogProps {
 }
 
 export function QuickViewDialog({ product, open, onOpenChange }: QuickViewDialogProps) {
+  const { toast } = useToast();
   if (!product) return null;
+
+  const handleAddToCart = () => {
+    toast({
+      title: "Added to cart",
+      description: `${product.name} has been added to your cart.`,
+    });
+  }
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -31,9 +40,14 @@ export function QuickViewDialog({ product, open, onOpenChange }: QuickViewDialog
             />
           </div>
           <div className="p-8 flex flex-col">
-            <h2 className="text-3xl font-bold tracking-tight">{product.name}</h2>
+            <div className="flex gap-2 flex-wrap">
+                <Badge variant="outline">{product.category}</Badge>
+                {product.tags.map(tag => (
+                  <Badge key={tag} variant="secondary">{tag}</Badge>
+                ))}
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight mt-2">{product.name}</h2>
             <div className="mt-2 flex items-center gap-4">
-              <Badge variant="outline">{product.category}</Badge>
               <div className="flex items-center gap-1">
                 <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                 <span className="font-medium">{product.rating}</span>
@@ -45,7 +59,7 @@ export function QuickViewDialog({ product, open, onOpenChange }: QuickViewDialog
             <div className="mt-8">
               <p className="text-4xl font-extrabold">${product.price.toFixed(2)}</p>
               <div className="mt-6 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="w-full">
+                <Button size="lg" className="w-full" onClick={handleAddToCart} disabled={product.stock === 0}>
                   <ShoppingCart className="mr-2 h-5 w-5" />
                   Add to Cart
                 </Button>

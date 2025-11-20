@@ -21,6 +21,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod1-2/600/800', hint: 'watch strap' },
       { url: 'https://picsum.photos/seed/prod1-3/600/800', hint: 'watch side' },
     ],
+    tags: ['Minimalist', 'Luxury', 'Leather'],
   },
   {
     id: '2',
@@ -39,6 +40,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod2-2/600/800', hint: 'backpack interior' },
       { url: 'https://picsum.photos/seed/prod2-3/600/800', hint: 'backpack detail' },
     ],
+    tags: ['Urban', 'Vegan', 'Commuter'],
   },
   {
     id: '3',
@@ -57,6 +59,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod3-2/600/800', hint: 'headphones folded' },
       { url: 'https://picsum.photos/seed/prod3-3/600/800', hint: 'headphones on stand' },
     ],
+    tags: ['Audio', 'Tech', 'Noise-Cancelling'],
   },
   {
     id: '4',
@@ -75,6 +78,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod4-2/600/800', hint: 'sunglasses case' },
       { url: 'https://picsum.photos/seed/prod4-3/600/800', hint: 'sunglasses detail' },
     ],
+    tags: ['Summer', 'UV Protection', 'Polarized'],
   },
   {
     id: '5',
@@ -93,6 +97,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod5-2/600/800', hint: 'sneakers top' },
       { url: 'https://picsum.photos/seed/prod5-3/600/800', hint: 'sneakers pair' },
     ],
+    tags: ['Casual', 'Leather', 'Everyday'],
   },
   {
     id: '6',
@@ -111,6 +116,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod6-2/600/800', hint: 'pen in box' },
       { url: 'https://picsum.photos/seed/prod6-3/600/800', hint: 'pen writing' },
     ],
+    tags: ['Stationery', 'Luxury', 'Gift'],
   },
   {
     id: '7',
@@ -129,6 +135,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod7-2/600/800', hint: 'blazer lapel' },
       { url: 'https://picsum.photos/seed/prod7-3/600/800', hint: 'blazer on model' },
     ],
+    tags: ['Formal', 'Wool', 'Modern'],
   },
   {
     id: '8',
@@ -147,6 +154,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod8-2/600/800', hint: 'mug set' },
       { url: 'https://picsum.photos/seed/prod8-3/600/800', hint: 'mug in use' },
     ],
+    tags: ['Handcrafted', 'Ceramic', 'Home'],
   },
   {
     id: '9',
@@ -165,6 +173,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod9-2/600/800', hint: 'scarf worn' },
       { url: 'https://picsum.photos/seed/prod9-3/600/800', hint: 'scarf folded' },
     ],
+    tags: ['Winter', 'Cashmere', 'Luxury'],
   },
   {
     id: '10',
@@ -183,6 +192,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod10-2/600/800', hint: 'speaker in room' },
       { url: 'https://picsum.photos/seed/prod10-3/600/800', hint: 'speaker light' },
     ],
+    tags: ['Smart Home', 'Tech', 'Audio'],
   },
   {
     id: '11',
@@ -201,6 +211,7 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod11-2/600/800', hint: 'wallet with cards' },
       { url: 'https://picsum.photos/seed/prod11-3/600/800', hint: 'wallet leather' },
     ],
+    tags: ['Leather', 'Security', 'Slim'],
   },
   {
     id: '12',
@@ -219,5 +230,6 @@ export const products: Product[] = [
       { url: 'https://picsum.photos/seed/prod12-2/600/800', hint: 'earbud close' },
       { url: 'https://picsum.photos/seed/prod12-3/600/800', hint: 'earbuds charging' },
     ],
+    tags: ['Audio', 'Tech', 'Wireless'],
   },
 ];
