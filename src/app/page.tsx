@@ -9,7 +9,7 @@ import { ProductCard } from '@/components/product-card';
 import { Button } from '@/components/ui/button';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Card, CardContent } from '@/components/ui/card';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ShoppingCart } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -17,17 +17,34 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { QuickViewDialog } from '@/components/quick-view-dialog';
+import { useState } from 'react';
+import type { Product } from '@/lib/types';
+import { Separator } from '@/components/ui/separator';
 
 export default function HomePage() {
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
+
   const heroImage = PlaceHolderImages.find(p => p.id === 'hero');
-  const featuredProducts = products.slice(0, 8); // Fetch more products for a better carousel experience
+  const featuredProducts = products.slice(0, 8);
+  const newArrivals = products.slice(8, 12);
   const promotionImage = PlaceHolderImages.find(p => p.id === 'promotion-1');
+
+  const categories = [
+    { name: 'Apparel', href: '/products?category=Apparel', image: 'https://picsum.photos/seed/cat-apparel/600/400', hint: 'stylish clothing' },
+    { name: 'Accessories', href: '/products?category=Accessories', image: 'https://picsum.photos/seed/cat-accessories/600/400', hint: 'modern accessories' },
+    { name: 'Footwear', href: '/products?category=Footwear', image: 'https://picsum.photos/seed/cat-footwear/600/400', hint: 'leather shoes' },
+  ];
+
+  const handleQuickView = (product: Product) => {
+    setSelectedProduct(product);
+  };
 
   return (
     <div className="flex flex-col">
       <ParallaxHero />
 
-      <section className="py-16 md:py-24 bg-background">
+      <section id="featured" className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Collection</h2>
@@ -46,7 +63,7 @@ export default function HomePage() {
               {featuredProducts.map((product) => (
                 <CarouselItem key={product.id} className="sm:basis-1/2 lg:basis-1/4">
                   <div className="p-1">
-                    <ProductCard product={product} />
+                    <ProductCard product={product} onQuickView={handleQuickView} />
                   </div>
                 </CarouselItem>
               ))}
@@ -64,10 +81,39 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="py-16 md:py-24 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Shop by Category</h2>
+            <p className="text-muted-foreground mt-2 text-lg">
+              Find what you're looking for, faster.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {categories.map((category) => (
+              <Link href={category.href} key={category.name} className="group relative block overflow-hidden rounded-lg">
+                <Image
+                  src={category.image}
+                  alt={category.name}
+                  width={600}
+                  height={400}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  data-ai-hint={category.hint}
+                />
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <h3 className="text-2xl font-bold text-white drop-shadow-md">{category.name}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {promotionImage && (
-        <section className="py-16 md:py-24 bg-secondary/50">
+        <section className="py-16 md:py-24 bg-background">
           <div className="container mx-auto px-4">
-            <Card className="overflow-hidden lg:grid lg:grid-cols-2 lg:items-center">
+            <Card className="overflow-hidden lg:grid lg:grid-cols-2 lg:items-center border-2 border-accent/50 shadow-lg">
               <div className="relative h-64 lg:h-auto lg:self-stretch">
                 <Image
                   src={promotionImage.imageUrl}
@@ -92,6 +138,24 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      <section className="py-16 md:py-24 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">New Arrivals</h2>
+            <p className="text-muted-foreground mt-2 text-lg">
+              Check out the latest additions to our collection.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {newArrivals.map((product) => (
+              <ProductCard key={product.id} product={product} onQuickView={handleQuickView} />
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      <Separator />
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4 text-center">
@@ -127,6 +191,16 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <QuickViewDialog
+        product={selectedProduct}
+        open={!!selectedProduct}
+        onOpenChange={(isOpen) => {
+          if (!isOpen) {
+            setSelectedProduct(null);
+          }
+        }}
+      />
     </div>
   );
 }
