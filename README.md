@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Lumina - Modern E-commerce Store
 
 Welcome to Lumina, a sleek and modern e-commerce platform built with a cutting-edge tech stack. This project serves as a demonstration of a highly performant, aesthetically pleasing, and feature-rich online store.
@@ -6,20 +5,22 @@ Welcome to Lumina, a sleek and modern e-commerce platform built with a cutting-e
 ## ✨ Key Features
 
 - **Modern & Responsive Design:** A beautiful and intuitive interface that looks great on all devices, built with Tailwind CSS and ShadCN UI.
-- **Dynamic Product Catalog:** Browse products by category, filter by price, and search for specific items.
+- **Dynamic Product Catalog:** Browse products by category, filter by price, and search for specific items. Products can be added dynamically through the admin dashboard.
+- **Interactive Shopping Cart:** A fully functional, client-side shopping cart. Add, remove, and update item quantities with a smooth, slide-out sidebar experience.
 - **AI-Powered Personalization:**
     - **Personalized Recommendations:** An AI-powered "You Might Also Like" section suggests products based on user browsing habits.
-    - **Enhanced Descriptions:** Product descriptions are automatically enriched with summaries from customer reviews using Genkit.
+    - **Enhanced Descriptions:** Product descriptions can be automatically enriched with summaries from customer reviews using Genkit (flow included).
 - **Product Details & Quick View:** View comprehensive product details on dedicated pages or use the "Quick View" modal for a faster look.
-- **Interactive UI:** Smooth animations, carousels, and a seamless user experience.
+- **Interactive UI:** Smooth animations, carousels, infinite scrolling on the product list, and a seamless user experience.
 - **Light & Dark Mode:** Easily toggle between light and dark themes.
-- **Admin Dashboard:** A simple table-based dashboard to view and manage products.
+- **Admin Dashboard:** A simple table-based dashboard to view and manage products, including a dialog to add new items to the store in real-time.
 - **Ready for Deployment:** Streamlined deployment process using Vercel.
 
 ## 🚀 Tech Stack
 
 - **Framework:** [Next.js](https://nextjs.org/) (App Router)
 - **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **State Management:** [Zustand](https://github.com/pmndrs/zustand)
 - **Styling:** [Tailwind CSS](https://tailwindcss.com/) & [ShadCN UI](https://ui.shadcn.com/)
 - **AI / Generative:** [Genkit (Google AI)](https://firebase.google.com/docs/genkit)
 - **Deployment:** [Vercel](https://vercel.com/)
@@ -88,6 +89,3 @@ This project is optimized for deployment on [Vercel](https://vercel.com/). A dep
    ```
 
 Follow the prompts from the Vercel CLI to complete the deployment.
-=======
-# Store
->>>>>>> 138c98f3bdccb35cbf80ac8d941264ed8f7abfd3
