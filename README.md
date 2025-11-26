@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Lumina - Modern E-commerce Store
 
 Welcome to Lumina, a sleek and modern e-commerce platform built with a cutting-edge tech stack. This project serves as a demonstration of a highly performant, aesthetically pleasing, and feature-rich online store.
@@ -87,3 +88,6 @@ This project is optimized for deployment on [Vercel](https://vercel.com/). A dep
    ```
 
 Follow the prompts from the Vercel CLI to complete the deployment.
+=======
+# Store
+>>>>>>> 138c98f3bdccb35cbf80ac8d941264ed8f7abfd3
